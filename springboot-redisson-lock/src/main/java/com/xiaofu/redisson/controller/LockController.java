@@ -36,7 +36,7 @@ public class LockController {
         try {
             if (reentrantLock.tryLock(100, 8, TimeUnit.SECONDS)) {
                 System.out.println(Thread.currentThread().getName() + "---" + order + "---" + "加锁成功");
-                Thread.currentThread().sleep(10000);
+                Thread.sleep(10000);
                 return "YES";
             } else {
                 System.out.println("线程 " + Thread.currentThread().getName() + "---" + order + "---" + "加锁失败");

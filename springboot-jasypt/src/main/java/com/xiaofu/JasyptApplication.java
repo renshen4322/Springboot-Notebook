@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 
 @Import({MyPropertiesBeanFactoryPostProcessor.class, conf.class})
-@ComponentScan("com.xiaofu")
+@ComponentScan(basePackages = {"com.xiaofu"})
 @SpringBootApplication
 public class JasyptApplication {
 
